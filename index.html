@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to LMS</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/welcome.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="image1">
+        <img src="./img/bukutumpuk.png" alt="image" />
+        <img src="./img/penggariswelcome.png" alt="img" />
+      </div>
+      <div class="image2">
+        <img src="./img/bukukuning.png" alt="image" />
+        <img src="./img/welcomebag.png" alt="Welcome" />
+        <img src="./img/pensil.png" alt="img" />
+      </div>
+      <div class="image3">
+        <img src="./img/welcomeThrophy.png" alt="img" />
+        <img src="./img/jangkawelcome.png" alt="img" />
+      </div>
+      <div class="box">
+        <div class="divider"></div>
+        <div class="logo-lms">
+          <img src="./img/lms.png" alt="LMS Goweb" />
+        </div>
+        <div class="content">
+          <div class="judul"><p>Selamat Datang di Learning Management System</p></div>
+          <div class="isi"><p>Memudahkan dalam proses belajar mengajar</p></div>
+
+          <!-- <input type="text" name="deviceToken" value="deviceToken" id="deviceToken" readonly />
+          <p id="location"></p> -->
+        </div>
+        <div class="button">
+          <a href="./view/Login/">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Preloader
+      //   var preloader = document.getElementById("preloader");
+      //   window.addEventListener("load", function () {
+      //     this.setTimeout(function () {
+      //       preloader.style.display = "none";
+      //     }, 2000);
+      //   });
+
+      // Device Token
+      var deviceToken = AndroidInterface.getDeviceToken();
+      var deviceTokenElement = document.getElementById("deviceToken");
+      deviceTokenElement.value = deviceToken;
+      var showLocation = document.getElementById("location");
+
+      // Lokasi
+      document.addEventListener("DOMContentLoaded", function () {
+        getLocationConstant();
+        if (document.getElementById("location").innerHTML === "") {
+          document.getElementById("location").innerHTML = "GPS belum diaktifkan";
+        }
+      });
+
+      function getLocationConstant() {
+        if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(onGeoSuccess, onGeoError);
+        } else {
+          document.getElementById("location").innerHTML = "Perangkat Anda tidak mendukung GPS.";
+        }
+      }
+
+      function onGeoSuccess(event) {
+        var latitude = event.coords.latitude;
+        var longitude = event.coords.longitude;
+        document.getElementById("location").innerHTML = "Lokasi : " + latitude + ", " + longitude;
+      }
+
+      function onGeoError(event) {
+        var errorText = "Terjadi kesalahan: kode " + event.code + ". " + event.message;
+        document.getElementById("location").innerHTML = errorText;
+      }
+    </script>
+  </body>
+</html>

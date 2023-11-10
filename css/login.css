@@ -1,0 +1,337 @@
+html,
+body {
+  overflow-x: hidden;
+}
+body {
+  width: 100vwh;
+  height: 100vh;
+  background-color: rgba(0, 127, 255, 1);
+  position: relative;
+}
+.head {
+  width: 100%;
+}
+.ornamen1 {
+  margin-top: 5rem;
+  position: relative;
+  margin-left: -3.5rem;
+  transform: rotate(30deg);
+  display: block;
+}
+.ornamen1 img {
+  width: 150px;
+  height: 150px;
+}
+.ornamen2 {
+  justify-content: flex-end;
+  position: relative;
+  display: flex;
+  margin-top: -12rem;
+  margin-right: -5rem;
+}
+.ornamen2 img {
+  width: 165px;
+  height: 165px;
+}
+.title {
+  margin-top: -8rem;
+  text-align: center;
+}
+.title img {
+  width: 11.875rem;
+  height: 4.8125rem;
+}
+.title p {
+  padding-top: 1.85rem;
+  color: white;
+  font-size: 1.25rem;
+}
+
+.container {
+  display: block;
+  width: 100vwh;
+  margin: auto;
+  margin-top: 4rem;
+  background-color: white;
+  border-radius: 2rem 2rem 0rem 0rem;
+}
+.title-content {
+  padding-top: 2rem;
+  text-align: center;
+  padding: 0rem -3rem 0rem -3rem;
+}
+.title-content :first-child {
+  font-size: 28px;
+  font-weight: bold;
+}
+.title-content .garis {
+  display: flex;
+  margin: 1.5rem 5rem 1.5rem 5rem;
+  align-items: center;
+  padding: 0.04rem;
+  background-color: black;
+  align-content: center;
+}
+.title-content :last-child {
+  font-size: 0.6875rem;
+  font-style: normal;
+  font-weight: 800;
+  color: #bebec9;
+  letter-spacing: 0.055rem;
+}
+
+.form {
+  padding: 0rem 4rem 0rem 3rem;
+  padding-top: 3rem;
+  /* padding: 3rem 2rem 0rem 2rem; */
+  text-align: center;
+}
+.form p {
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+}
+input {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  border: 1px solid #bebec9;
+  border-radius: 12px;
+  background-color: #407cff14;
+  font-size: small;
+  font-weight: 500;
+  color: black;
+}
+input:focus {
+  border: rgba(0, 127, 255, 1) 2px solid;
+}
+.btn {
+  text-align: center;
+  margin-left: 1rem;
+}
+button {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 13px;
+  width: 65%;
+  background-color: rgba(0, 127, 255, 1);
+  border-radius: 11px;
+  border: none;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.114);
+  display: inline-block;
+}
+button:hover {
+  background-color: rgba(0, 127, 255, 0.7);
+}
+.footer p {
+  text-align: center;
+  color: #bebec9;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 800;
+  margin-top: 10rem;
+  padding-bottom: 3rem;
+  letter-spacing: 0.05rem;
+}
+
+/* Empty Alert */
+.empty-alert {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(144, 144, 144, 0.4);
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20rem 4rem 0rem 4rem;
+  background-color: white;
+  text-align: center;
+  height: 200px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.044);
+  animation: emptyAlert 0.3s ease-in-out;
+}
+
+.box iconify-icon {
+  color: red;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.empty-alert .box p:first-child {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.empty-alert .box button {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  margin: auto;
+  border-radius: 0.65rem;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@keyframes emptyAlert {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Empty Alert */
+.success-alert {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(144, 144, 144, 0.4);
+}
+
+.success-alert .box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 20rem 4rem 0rem 4rem;
+  background-color: white;
+  text-align: center;
+  height: 200px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.044);
+  animation: emptyAlert 0.3s ease-in-out;
+}
+
+.box2 iconify-icon {
+  color: rgba(0, 127, 255, 1);
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.success-alert .box2 p:first-child {
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.success-alert .box2 button {
+  display: inline-flex;
+  padding: 0.5rem 1rem;
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 127, 255, 1);
+  margin: auto;
+  border-radius: 0.65rem;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+@keyframes emptyAlert {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* responsive tablet */
+@media (min-width: 768px) {
+  .ornamen1 {
+    margin-top: 12rem;
+    position: relative;
+    margin-left: -5rem;
+    transform: rotate(30deg);
+    display: block;
+  }
+  .container {
+    width: 100vwh;
+  }
+  .title {
+    margin-top: -18rem;
+    text-align: center;
+  }
+  .title img {
+    width: 11.875rem;
+    height: 4.8125rem;
+  }
+
+  .title-content :first-child {
+    font-size: 36px;
+    font-weight: bold;
+  }
+  .title-content .garis {
+    padding: 0.06rem;
+  }
+  .title-content :last-child {
+    font-size: 1rem;
+  }
+  .form p {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  input {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    padding: 14px;
+    outline: none;
+    border: 1px solid #bebec9;
+    border-radius: 12px;
+    background-color: #407cff14;
+    font-size: small;
+    font-weight: 500;
+    color: black;
+  }
+  button {
+    text-align: center;
+    margin-top: 1rem;
+    padding: 15px;
+    width: 65%;
+    border-radius: 11px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 1px 2px 2px rgba(0, 0, 0, 0.114);
+    display: inline-block;
+  }
+
+  .footer p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 30rem;
+    padding-bottom: 4rem;
+  }
+}

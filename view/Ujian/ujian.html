@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/ujian.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Ujian</title>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader">
+        <span class="loader-page"></span>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="atas">
+          <div class="waktu">
+            <i class="fa-solid fa-stopwatch" style="color: #ff1700"></i>
+            <p>05:42</p>
+          </div>
+          <div class="keluar">
+            <button onclick="showModal()">Keluar</button>
+          </div>
+        </div>
+        <div class="bawah">
+          <button class="tab-link active" onclick="showTab(event, 'pilgan')">Pilihan Ganda</button>
+          <button class="tab-link" onclick="showTab(event, 'essay')">Essay</button>
+        </div>
+      </div>
+
+      <!-- Modal Keluar -->
+      <div class="modal" id="modal">
+        <div class="modal-page">
+          <p class="title">Apakah Anda ingin mengakhiri ujian ?</p>
+          <p class="deskripsi">Pastikan Anda telah mengisi semua soal. Jika ingin memeriksa kembali jawaban Anda klik Batal, jika ingin mengakhiri ujian klik Selesai.</p>
+          <div class="tombol">
+            <button class="batal" onclick="closeModal()">Batal</button>
+            <button id="submitButton" class="quit">Selesai</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Isi -->
+      <div class="isi" id="isiForm">
+        <!-- Tab Pilihan Ganda -->
+        <div id="pilgan" class="tab-content" style="display: block">
+          <!-- Form -->
+          <form action="" id="myFormPilgan">
+            <div class="list" id="soal-1">
+              <p class="title">Question 1</p>
+              <div class="kotak">
+                <img src="../../img/ujian-image.png" alt="Ujian" />
+                <div class="soal">
+                  <p>Perhatikan gambar di atas!, Gambar tersebut adalah contoh penerapan nilai Pancasila, Sila yang ke ...</p>
+                </div>
+                <div class="jawaban">
+                  <div class="pilihan">
+                    <input type="radio" name="soal-1" id="soal-1-a" checked />
+                    <label for="soal-1-a">1</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-1" id="soal-1-b" />
+                    <label for="soal-1-b">2</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-1" id="soal-1-c" />
+                    <label for="soal-1-c">3</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-1" id="soal-1-d" />
+                    <label for="soal-1-d">4</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list" id="soal-2">
+              <p class="title">Question 2</p>
+              <div class="kotak">
+                <video width="320" height="240" controls>
+                  <source src="../../img/video.mp4" type="video/mp4" />
+                  <source src="../../img/video.ogg" type="video/ogg" />
+                  Your browser does not support the video tag.
+                </video>
+                <div class="soal">
+                  <p>Perhatikan gambar di atas!, Gambar tersebut adalah contoh penerapan nilai Pancasila, Sila yang ke ...</p>
+                </div>
+                <div class="jawaban">
+                  <div class="pilihan">
+                    <input type="radio" name="soal-2" id="soal-2-a" />
+                    <label for="soal-2-a">1</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-2" id="soal-2-b" checked />
+                    <label for="soal-2-b">2</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-2" id="soal-2-c" />
+                    <label for="soal-2-c">3</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-2" id="soal-2-d" />
+                    <label for="soal-2-d">4</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="list" id="soal-3">
+              <p class="title">Question 3</p>
+              <div class="kotak">
+                <audio controls>
+                  <source src="horse.ogg" type="audio/ogg" />
+                  <source src="../../img/audio.mp3" type="audio/mpeg" />
+                  Your browser does not support the audio tag.
+                </audio>
+                <div class="soal">
+                  <p>Perhatikan gambar di atas!, Gambar tersebut adalah contoh penerapan nilai Pancasila, Sila yang ke ...</p>
+                </div>
+                <div class="jawaban">
+                  <div class="pilihan">
+                    <input type="radio" name="soal-3" id="soal-3-a" />
+                    <label for="soal-3-a">1</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-3" id="soal-3-b" />
+                    <label for="soal-3-b">2</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-3" id="soal-3-c" checked />
+                    <label for="soal-3-c">3</label>
+                  </div>
+                  <div class="pilihan">
+                    <input type="radio" name="soal-3" id="soal-3-d" />
+                    <label for="soal-3-d">4</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+
+          <!-- Navigasi Nomor -->
+          <div class="quiz-navigasi">
+            <p>Quiz Navigation</p>
+            <div class="nomor">
+              <button class="active" onclick="window.location.href='#soal-1'">1</button>
+              <button class="active" onclick="window.location.href='#soal-2'">2</button>
+              <button class="active" onclick="window.location.href='#soal-3'">3</button>
+              <button class="">4</button>
+              <button class="">5</button>
+              <button class="">6</button>
+              <button class="">7</button>
+              <button class="">8</button>
+              <button class="">9</button>
+              <button class="">10</button>
+              <button class="">11</button>
+              <button class="">12</button>
+              <button class="">13</button>
+              <button class="">14</button>
+              <button class="">15</button>
+              <button class="">16</button>
+              <button class="">17</button>
+              <button class="">18</button>
+              <button class="">19</button>
+              <button class="">20</button>
+              <button class="">21</button>
+              <button class="">22</button>
+              <button class="">23</button>
+              <button class="">24</button>
+              <button class="">25</button>
+              <button class="">26</button>
+              <button class="">27</button>
+              <button class="">28</button>
+              <button class="">29</button>
+              <button class="">30</button>
+              <button class="">31</button>
+              <button class="">32</button>
+              <button class="">25</button>
+              <button class="">26</button>
+              <button class="">27</button>
+              <button class="">28</button>
+              <button class="">29</button>
+              <button class="">30</button>
+              <button class="">31</button>
+              <button class="">32</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tab Essay -->
+        <div id="essay" class="tab-content">
+          <!-- Form -->
+          <form action="" id="myFormEssay">
+            <div class="list-essay">
+              <p class="title">Question 4</p>
+              <div class="kotak">
+                <p>Bentuk ringkasan masih mempertahankan adanya...</p>
+                <textarea name="essay-1" id="soal-essay-1" cols="30" rows="10"></textarea>
+                <div class="tombol">
+                  <button type="button" id="saveButton1">Simpan</button>
+                </div>
+                <!-- Input Hidden -->
+                <input type="text" name="valueEssay1" id="valueEssay1" hidden />
+              </div>
+            </div>
+            <div class="list-essay">
+              <p class="title">Question 5</p>
+              <div class="kotak">
+                <p>Bentuk ringkasan masih mempertahankan adanya...</p>
+                <textarea name="essay-2" id="soal-essay-2" cols="30" rows="10"></textarea>
+                <div class="tombol">
+                  <button type="button" id="saveButton2">Simpan</button>
+                </div>
+                <input type="text" name="valueEssay2" id="valueEssay2" hidden />
+              </div>
+            </div>
+            <div class="list-essay">
+              <p class="title">Question 6</p>
+              <div class="kotak">
+                <p>Bentuk ringkasan masih mempertahankan adanya...</p>
+                <textarea name="essay-3" id="soal-essay-3" cols="30" rows="10"></textarea>
+                <div class="tombol">
+                  <button type="button" id="saveButton3">Simpan</button>
+                </div>
+                <input type="text" name="valueEssay3" id="valueEssay3" hidden />
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <div class="deskripsi">
+          <p>Pendidikan Pancasila dan Kewarganegaraan</p>
+          <p>40 0f 40 Questions</p>
+        </div>
+        <div class="navigasi">
+          <button>
+            <i class="fa-solid fa-arrow-left fa-xl"></i>
+          </button>
+          <button>
+            <i class="fa-solid fa-arrow-right fa-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../script/script.js"></script>
+    <script type="text/javascript">
+      // Modal
+      var modal = document.getElementById("modal");
+      function showModal() {
+        modal.style.display = "block";
+      }
+      function closeModal() {
+        modal.style.display = "none";
+      }
+
+      // Textarea Value
+      const element = [];
+      for (let i = 1; i <= 3; i++) {
+        const value = `essayValue${i}`;
+        const valueElement = document.getElementById(value);
+        element.push(valueElement);
+
+        const saveButton = document.getElementById(`saveButton${i}`);
+
+        saveButton.addEventListener("click", function () {
+          saveTextareaValue(i);
+        });
+      }
+
+      function saveTextareaValue(essayNumber) {
+        const textarea = document.getElementById(`soal-essay-${essayNumber}`);
+        document.getElementById("valueEssay" + `${essayNumber}`).value = `${textarea.value}`;
+      }
+
+      // Button Submit 2 Form
+      const submitButton = document.getElementById("submitButton");
+
+      submitButton.addEventListener("click", function () {
+        const formPilgan = document.getElementById("myFormPilgan");
+        const formEssay = document.getElementById("myFormEssay");
+
+        formPilgan.submit();
+        formEssay.submit();
+
+        window.location.href = "./lanjut-ujian.html";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Halaman Login</title>
+    <link rel="stylesheet" href="../../css/login.css" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader">
+        <span class="loader-page"></span>
+      </div>
+    </div>
+
+    <!-- header -->
+    <div>
+      <div class="empty-alert" id="emptyAlert">
+        <div class="box">
+          <iconify-icon icon="system-uicons:cross-circle" style="font-size: 4.5rem"></iconify-icon>
+          <p>Sign In Gagal</p>
+          <button onclick="closeEmptyAlert()">Kembali</button>
+        </div>
+      </div>
+
+      <div>
+        <div class="success-alert" id="successAlert">
+          <div class="box2">
+            <iconify-icon icon="system-uicons:check-circle-outside" style="font-size: 4rem"></iconify-icon>
+            <p>Sign In Berhasil</p>
+            <button>Redirecting</button>
+          </div>
+        </div>
+      </div>
+      <div class="head">
+        <div class="ornamen1">
+          <img src="../../img/golden cartoon trophy.png" alt="" />
+        </div>
+        <div class="title">
+          <img src="../../img/logo1.png" alt="logo lms goweb" />
+          <p>Selamat Datang di LMS</p>
+        </div>
+        <div class="ornamen2">
+          <img src="../../img/pensil.png" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="title-content">
+        <p>Sign In</p>
+        <div class="garis"></div>
+        <p>Software Sekolah by PT. Arfin Goweb Indonesia</p>
+      </div>
+      <div class="form">
+        <form action="/" name="myForm" onsubmit="return validateForm()">
+          <p for="">Username</p>
+          <input type="text" name="username" placeholder="Input your username..." value="" />
+          <p for="">Password</p>
+          <input type="password" name="password" placeholder="Input your password..." value="" />
+          <!-- <input type="button" name="password" placeholder="Input your password..." value="Login" /> -->
+          <div class="btn">
+            <button type="submit">Sign In</button>
+          </div>
+        </form>
+        <div class="footer">
+          <p onclick="window.location.href='../Dashboard/'">www.gowebindonesia.co.id</p>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="../../script/script.js"></script>
+    <script>
+      function validateForm() {
+        var username = document.forms["myForm"]["username"].value;
+        var password = document.forms["myForm"]["password"].value;
+
+        if (username == "" && password == "") {
+          showEmptyAlert();
+          return false;
+        } else if (username == "" && password != "") {
+          showEmptyAlert();
+          return false;
+        } else if (username != "" && password == "") {
+          showEmptyAlert();
+          return false;
+        } else {
+          // Simulate successful login
+          showSuccessAlert();
+          setTimeout(function () {
+            redirectToDashboard(); // Replace this with actual redirection logic
+          }, 1000); // Simulating a delay before showing success message and redirecting
+          return false; // Prevent form submission for this example
+        }
+      }
+      var emptyAlert = document.getElementById("emptyAlert");
+      var success = document.getElementById("successAlert");
+      function showEmptyAlert() {
+        emptyAlert.style.display = "block";
+      }
+      function closeEmptyAlert() {
+        emptyAlert.style.display = "none";
+      }
+      function showSuccessAlert() {
+        successAlert.style.display = "block";
+      }
+      function redirectToDashboard() {
+        window.location.href = "../Dashboard/index.html";
+      }
+    </script>
+  </body>
+</html>

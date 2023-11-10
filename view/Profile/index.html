@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile</title>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/myprofile.css" />
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader">
+        <span class="loader-page"></span>
+      </div>
+    </div>
+    <div class="container">
+      <!-- alert -->
+      <div class="alert" id="alertKelasX">
+        <div class="box">
+          <iconify-icon icon="solar:danger-triangle-bold" style="font-size: 5rem"></iconify-icon>
+          <p>Anda yakin ingin mengganti kelas?</p>
+          <div class="btn">
+            <div class="btn1">
+              <button onclick="closeAlert()">Tidak</button>
+            </div>
+            <div class="btn2">
+              <button onclick="redirectingAlertX()">Ya</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert" id="alertKelasXI">
+        <div class="box">
+          <iconify-icon icon="solar:danger-triangle-bold" style="font-size: 5rem"></iconify-icon>
+          <p>Anda yakin ingin mengganti kelas?</p>
+          <div class="btn">
+            <div class="btn1">
+              <button onclick="closeAlert()">Tidak</button>
+            </div>
+            <div class="btn2">
+              <button onclick="redirectingAlertXI()">Ya</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert" id="alertKelasXII">
+        <div class="box">
+          <iconify-icon icon="solar:danger-triangle-bold" style="font-size: 5rem"></iconify-icon>
+          <p>Anda yakin ingin mengganti kelas?</p>
+          <div class="btn">
+            <div class="btn1">
+              <button onclick="closeAlert()">Tidak</button>
+            </div>
+            <div class="btn2">
+              <button onclick="redirectingAlertXII()">Ya</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header">
+        <p>My Profile</p>
+      </div>
+      <div class="content">
+        <div class="sub-content">
+          <img src="../../img/people 1.png" alt="" />
+          <p>ADIB IBRA MAULANA</p>
+          <div class="kelas">
+            <p id="kelas-x" class="" onclick="showAlertX()">X-PK</p>
+            <p id="kelas-xi" class="" onclick="showAlertXI()">XI-PK</p>
+            <p id="kelas-xii" class="active" onclick="showAlertXII()">XII-PK</p>
+          </div>
+        </div>
+      </div>
+      <div class="content2">
+        <div class="jenis">
+          <iconify-icon icon="solar:user-circle-bold-duotone"></iconify-icon>
+          <p>Laki-laki</p>
+        </div>
+        <div class="alamat">
+          <iconify-icon icon="fa6-solid:location-dot"></iconify-icon>
+          <p>Jl.Kalimantan No.3 Caruban, Kecamatan Mejayan, Madiun</p>
+        </div>
+        <div class="jenis">
+          <iconify-icon icon="ic:round-email"></iconify-icon>
+          <p>NIS 11283</p>
+        </div>
+      </div>
+
+      <div class="content3">
+        <a href="./edit-profile.html" style="text-decoration: none; color: inherit">
+          <div class="item">
+            <p>Edit Profile</p>
+            <iconify-icon icon="ep:arrow-right-bold"></iconify-icon>
+          </div>
+        </a>
+        <div class="garis"></div>
+        <div class="item2">
+          <a href="../../index.html">
+            <p>Log Out</p>
+          </a>
+          <iconify-icon icon="ep:arrow-right-bold"></iconify-icon>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar -->
+    <div class="bar">
+      <a href="../Dashboard/" class="home">
+        <iconify-icon icon="mingcute:home-5-fill" width="30" height="30" class=""></iconify-icon>
+      </a>
+      <a href="../Guru/" class="guru">
+        <iconify-icon icon="fa6-solid:user-group" width="30" height="30" class=""></iconify-icon>
+      </a>
+      <a href="../Notifikasi/" class="notif">
+        <iconify-icon icon="ion:notifications" width="30" height="30" class=""></iconify-icon>
+      </a>
+      <a href="../Profile/" class="profile">
+        <iconify-icon icon="heroicons-solid:user" width="30" height="30" class="active"></iconify-icon>
+      </a>
+    </div>
+
+    <script src="../../script/script.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script type="text/javascript">
+      var alertKelasX = document.getElementById("alertKelasX");
+      var alertKelasXI = document.getElementById("alertKelasXI");
+      var alertKelasXII = document.getElementById("alertKelasXII");
+      var kelasX = document.getElementById("kelas-x");
+      var kelasXI = document.getElementById("kelas-xi");
+      var kelasXII = document.getElementById("kelas-xii");
+
+      function showAlertX() {
+        alertKelasX.style.display = "block";
+      }
+      function showAlertXI() {
+        alertKelasXI.style.display = "block";
+      }
+      function showAlertXII() {
+        alertKelasXII.style.display = "block";
+      }
+      function closeAlert() {
+        alertKelasX.style.display = "none";
+        alertKelasXI.style.display = "none";
+        alertKelasXII.style.display = "none";
+      }
+      function redirectingAlertX() {
+        document.querySelector(".active").classList.remove("active");
+        kelasX.classList.add("active");
+        closeAlert();
+      }
+      function redirectingAlertXI() {
+        document.querySelector(".active").classList.remove("active");
+        kelasXI.classList.add("active");
+        closeAlert();
+      }
+      function redirectingAlertXII() {
+        document.querySelector(".active").classList.remove("active");
+        kelasXII.classList.add("active");
+        closeAlert();
+      }
+      function showAlertX() {
+        alertKelasX.style.display = "block";
+      }
+      function showAlertXI() {
+        alertKelasXI.style.display = "block";
+      }
+      function showAlertXII() {
+        alertKelasXII.style.display = "block";
+      }
+      function closeAlert() {
+        alertKelasX.style.display = "none";
+        alertKelasXI.style.display = "none";
+        alertKelasXII.style.display = "none";
+      }
+      function redirectingAlertX() {
+        document.querySelector(".active").classList.remove("active");
+        kelasX.classList.add("active");
+        closeAlert();
+      }
+      function redirectingAlertXI() {
+        document.querySelector(".active").classList.remove("active");
+        kelasXI.classList.add("active");
+        closeAlert();
+      }
+      function redirectingAlertXII() {
+        document.querySelector(".active").classList.remove("active");
+        kelasXII.classList.add("active");
+        closeAlert();
+      }
+    </script>
+  </body>
+</html>

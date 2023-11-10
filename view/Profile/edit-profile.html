@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/edit-profile.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <title>Edit Profile</title>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader">
+        <span class="loader-page"></span>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header-nav">
+        <div class="icon">
+          <a href="./index.html">
+            <i class="fa-solid fa-arrow-left fa-xl" style="color: #000"></i>
+          </a>
+        </div>
+        <div class="title">
+          <p>Edit Profile</p>
+        </div>
+      </div>
+
+      <!-- Isi -->
+      <div class="isi">
+        <div class="upload" id="upload">
+          <input type="file" name="photo" id="input" accept="image/*"/>
+          <label for="input" id="icon">
+            <div class="satu">
+              <img src="../../img/ujian-image.png" alt="Profile" id="gambar" />
+            </div>
+            <div class="dua">
+              <i class="fa-solid fa-camera fa-xl"></i>
+            </div>
+          </label>
+        </div>
+        <div class="nama">
+          <p>ADIB IBRA MAULANA</p>
+        </div>
+        <form action="">
+          <div class="form">
+            <div>
+              <p class="label">Nama Lengkap</p>
+              <input type="text" name="" id="" />
+            </div>
+            <div>
+              <p class="label">No.HP (WhatsApp)</p>
+              <input type="text" name="" id="" />
+            </div>
+            <div>
+              <p class="label">Email</p>
+              <input type="email" name="" id="" />
+            </div>
+            <div>
+              <p class="label">Password Baru</p>
+              <input type="password" name="" id="" />
+            </div>
+            <div>
+              <p class="label">Ulangi Password baru</p>
+              <input type="password" name="" id="" />
+            </div>
+            <div class="warning">
+              <p>Kosongkan jika tidak ingin merubah password INGAT!! JIka password diubah, maka password login siakad ikut berubah</p>
+            </div>
+          </div>
+          <div class="button">
+            <input type="submit" name="" id="" value="Batal" />
+            <input type="submit" name="" id="" value="Simpan" />
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../../script/script.js"></script>
+    <script>
+      const upload = document.getElementById("upload");
+      const gambar = document.getElementById("gambar");
+      const input = document.getElementById("input");
+      const icon = document.getElementById("icon");
+
+      input.addEventListener("change", function () {
+        const chooseFile = this.files[0];
+
+        if (chooseFile) {
+          const read = new FileReader();
+
+          read.addEventListener("load", function () {
+            gambar.setAttribute("src", read.result);
+          });
+
+          read.readAsDataURL(chooseFile);
+        }
+      });
+    </script>
+  </body>
+</html>

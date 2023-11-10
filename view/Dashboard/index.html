@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../css/dashboard.css" />
+
+    <!-- Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <!-- Loader -->
+    <div id="loader">
+      <div class="loader">
+        <span class="loader-page"></span>
+      </div>
+    </div>
+
+    <!-- Modal Filter -->
+    <div class="cari-filter" id="cari-filter">
+      <div class="modal">
+        <form action="">
+          <div class="head">
+            <p>Filter</p>
+            <span id="close" class="fa-solid fa-xmark" onclick="closeFilter()"> </span>
+          </div>
+          <p class="berdasarkan">Cari Berdasarkan</p>
+          <div class="pilih">
+            <input type="radio" name="filter" id="guru" value="Guru" checked />
+            <label for="guru">Guru</label>
+            <input type="radio" name="filter" id="mapel" value="Mata Pelajaran" />
+            <label for="mapel">Mata Pelajaran</label>
+          </div>
+          <div class="submit">
+            <button type="submit">OK</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Header -->
+      <div class="header">
+        <div class="bawah">
+          <div class="paragraf">
+            <p>Good Morning,</p>
+            <p>Adib</p>
+          </div>
+          <img src="../../img/frame-header.png" alt="" />
+        </div>
+      </div>
+
+      <!-- Isi -->
+      <div class="isi">
+        <a href="../Guru/summary-topik.html" class="kotak-ujian">
+          <img src="../../img/ujian-book.png" alt="" />
+          <div class="keterangan">
+            <p class="mapel">Ujian Pendidikan Kewarganegaraan</p>
+            <div class="new">
+              <p>New</p>
+            </div>
+          </div>
+        </a>
+
+        <div class="terbaru">
+          <div class="cari">
+            <div class="box">
+              <div class="icon">
+                <iconify-icon icon="iconamoon:search-light" width="20px" style="color: #868686"></iconify-icon>
+              </div>
+              <div class="input">
+                <input type="text" name="cari" id="cari" placeholder=" Search..." />
+              </div>
+            </div>
+            <button onclick="showFilter()" id="filter">
+              <iconify-icon icon="streamline:interface-setting-slider-horizontal-adjustment-adjust-controls-fader-horizontal-settings-slider" width="20" style="color: black"></iconify-icon>
+            </button>
+          </div>
+        </div>
+
+        <p class="title">Materi dan Ujian</p>
+        <a href="../Guru/summary-topik.html" class="list">
+          <div class="gambar">
+            <img src="../../img/teacher.png" alt="" />
+          </div>
+          <div class="deskripsi">
+            <div class="guru">
+              <p>Wagimin, S.Pd, M.Pd</p>
+              <p>1 hr</p>
+            </div>
+            <div class="mapel">
+              <p>Ujian Pendidikan Pancasila dan Kewarganegaraan</p>
+            </div>
+          </div>
+        </a>
+        <a href="../Guru/summary-topik.html" class="list">
+          <div class="gambar">
+            <img src="../../img/frame-header.png" alt="" />
+          </div>
+          <div class="deskripsi">
+            <div class="guru">
+              <p>Wagimin, S.Pd, M.Pd</p>
+              <p>1 hr</p>
+            </div>
+            <div class="mapel">
+              <p>Ujian Pendidikan Pancasila dan Kewarganegaraan</p>
+            </div>
+          </div>
+        </a>
+        <a href="../Guru/summary-topik.html" class="list">
+          <div class="gambar">
+            <img src="../../img/guru1.jpg" alt="" />
+          </div>
+          <div class="deskripsi">
+            <div class="guru">
+              <p>Wagimin, S.Pd, M.Pd</p>
+              <p>1 hr</p>
+            </div>
+            <div class="mapel">
+              <p>Ujian Pendidikan Pancasila dan Kewarganegaraan</p>
+            </div>
+          </div>
+        </a>
+        <a href="../Guru/summary-topik.html" class="list">
+          <div class="gambar">
+            <img src="../../img/teacher.png" alt="" />
+          </div>
+          <div class="deskripsi">
+            <div class="guru">
+              <p>Wagimin, S.Pd, M.Pd</p>
+              <p>1 hr</p>
+            </div>
+            <div class="mapel">
+              <p>Ujian Pendidikan Pancasila dan Kewarganegaraan</p>
+            </div>
+          </div>
+        </a>
+        <a href="../Guru/summary-topik.html" class="list">
+          <div class="gambar">
+            <img src="../../img/frame-header.png" alt="" />
+          </div>
+          <div class="deskripsi">
+            <div class="guru">
+              <p>Wagimin, S.Pd, M.Pd</p>
+              <p>1 hr</p>
+            </div>
+            <div class="mapel">
+              <p>Ujian Pendidikan Pancasila dan Kewarganegaraan</p>
+            </div>
+          </div>
+        </a>
+        <a href="../Guru/summary-topik.html" class="list">
+          <div class="gambar">
+            <img src="../../img/guru1.jpg" alt="" />
+          </div>
+          <div class="deskripsi">
+            <div class="guru">
+              <p>Wagimin, S.Pd, M.Pd</p>
+              <p>1 hr</p>
+            </div>
+            <div class="mapel">
+              <p>Ujian Pendidikan Pancasila dan Kewarganegaraan</p>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Bar -->
+      <div class="bar">
+        <a href="./index.html" class="home">
+          <iconify-icon icon="mingcute:home-5-fill" width="30" height="30" class="active"></iconify-icon>
+        </a>
+        <a href="../Guru/" class="guru">
+          <iconify-icon icon="fa6-solid:user-group" width="30" height="30"></iconify-icon>
+        </a>
+        <a href="../Notifikasi/" class="notif">
+          <iconify-icon icon="ion:notifications" width="30" height="30"></iconify-icon>
+        </a>
+        <a href="../Profile/" class="profile">
+          <iconify-icon icon="heroicons-solid:user" width="30" height="30"></iconify-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- Icon -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="../../script/script.js"></script>
+    <script type="text/javascript">
+      const modal = document.getElementById("cari-filter");
+      function showFilter() {
+        modal.style.display = "block";
+      }
+      function closeFilter() {
+        modal.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

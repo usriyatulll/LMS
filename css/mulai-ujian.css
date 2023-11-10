@@ -1,0 +1,166 @@
+body {
+  width: 100vwh;
+  height: 100vh;
+  background-color: #ffff;
+}
+.container {
+  margin: auto;
+}
+.header {
+  top: 0;
+  position: fixed;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  background-color: #ffff;
+  border-bottom: 2px solid rgba(220, 220, 220, 0.5);
+  text-align: center;
+}
+
+.header a {
+  text-decoration: none;
+  color: #000;
+}
+.icon {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  margin-left: 1rem;
+  margin-right: -3rem;
+}
+.header .icon iconify-icon {
+  background-color: #f2f2f2;
+  border-radius: 100%;
+  border-radius: 1.25rem;
+  padding: 0.65rem;
+  display: inline-flex;
+  flex-direction: column;
+}
+.header .title {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.content {
+  margin-top: 7rem;
+  display: inline-flex flex;
+  background-color: rgba(0, 127, 255, 1);
+  height: 18rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.content,
+.judul1 {
+  text-align: center;
+  padding-top: 0.5rem;
+  color: #ffff;
+  font-size: 0.875 rem;
+  font-weight: 600;
+}
+.content .judul {
+  text-align: center;
+  padding-top: 1rem;
+  color: #ffff;
+  font-size: small;
+  font-weight: 500;
+}
+.sub-content {
+  margin-top: 0.5rem;
+  background-color: #ffff;
+  /* width: 17.4375rem;
+  height: 12.6875rem; */
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  border-radius: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.guru {
+  display: ;
+}
+.sub-content .icon1 {
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+}
+.sub-content .icon1 iconify-icon {
+  color: black;
+  background-color: #ffff;
+  padding: 0.3125rem;
+  border: 0.5px solid #000;
+  border-radius: 0.25rem;
+  margin-top: 0.5rem;
+}
+.sub-content .icon1 p {
+  color: black;
+  font-size: small;
+}
+
+.nama {
+  margin-top: -2rem;
+  margin-left: 3.5rem;
+  color: #000;
+  font-size: small;
+  background-color: #f2f2f2;
+  border-radius: 0.25rem;
+  padding: 0.27rem;
+  width: 10rem;
+}
+.garis {
+  background-color: #000;
+  margin: 0.5rem 1rem 0.5rem 1rem;
+  padding: 0.05rem;
+}
+.waktu {
+  margin-top: -1rem;
+}
+.hari {
+  margin-top: -1rem;
+}
+
+.sub-content2 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+img {
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.teks {
+  margin-top: -1rem;
+}
+.sub-content2 .p1 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.sub-content2 .p2 {
+  margin-top: 1rem;
+  font-size: small;
+  font-weight: 600;
+  color: #b4b4b4;
+}
+.btn {
+  text-align: center;
+}
+button {
+  background-color: rgba(0, 127, 255, 1);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.625rem;
+  color: #ffff;
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+button:hover {
+  background-color: rgba(0, 127, 255, 0.6);
+}
