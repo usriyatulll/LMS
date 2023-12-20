@@ -260,7 +260,7 @@ body {
   justify-content: center;
   align-items: center;
   border: none;
-  background-color: #4f35ca;
+  background-color: rgba(0, 127, 255, 1);
   margin: auto;
   border-radius: 0.35rem;
   color: white;
